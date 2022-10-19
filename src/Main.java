@@ -28,7 +28,7 @@ public class Main {
         System.out.println(harry);
 
         Grifindor.compareGrif(harry, ron);
-        Compare.compareAnyStudents(harry, drako);
+        Hogwarts.compareAnyStudents(harry, drako);
     }
 
     public static int getRandomScore(int maxScore) {
