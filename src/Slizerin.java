@@ -76,6 +76,18 @@ public class Slizerin extends Hogwarts{
                 + getTransgressionRange() + ", уровень хитрости: " + getCunning() + ", уровень решительности: " + getDecisiveness() + " и уровень амбициозности: " + getAmbition()
                 + ", уровень находчивости: " + getResourcefulness() + " и уровень жажды власти: " + getLustForPower();
     }
+    public static void compareSliz(Slizerin one, Slizerin two) {
+        int sumOne = one.getAmbition() + one.getResourcefulness() + one.getLustForPower() + one.getCunning() + one.getDecisiveness();
+        int sumTwo = two.getAmbition() + two.getResourcefulness() + two.getLustForPower() + two.getCunning() + two.getDecisiveness();
+
+        if (sumOne > sumTwo) {
+            System.out.println(one.getName() + " лучший Слизеренец чем " + two.getName());
+        } else if (sumOne < sumTwo) {
+            System.out.println(two.getName() + " лучший Слизеренец чем " + one.getName());
+        } else {
+            System.out.println("Оба Слизеренца равны");
+        }
+    }
 }
 
 

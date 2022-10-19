@@ -49,4 +49,16 @@ public class Pufenduy extends Hogwarts{
         return "Студент " + getName() + " учится на факультете Гриффиндор и имеет силу магии: " + getMagicStrength() + ", дальность трансгрессии: "
                 + getTransgressionRange() + ", уровень трудолюбия: " + getDiligence() + ", уровень верности: " + getLoyalty() + " и уровень честности: " + getHonesty();
     }
+    public static void comparePuf(Pufenduy one, Pufenduy two) {
+        int sumOne = one.getDiligence() + one.getHonesty() + one.getLoyalty();
+        int sumTwo = two.getDiligence() + two.getHonesty() + two.getLoyalty();
+
+        if (sumOne > sumTwo) {
+            System.out.println(one.getName() + " лучший Пуффендуец чем " + two.getName());
+        } else if (sumOne < sumTwo) {
+            System.out.println(two.getName() + " лучший Пуффендуец чем " + one.getName());
+        } else {
+            System.out.println("Оба Пуффендуйца равны");
+        }
+    }
 }

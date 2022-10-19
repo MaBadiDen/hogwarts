@@ -49,4 +49,17 @@ public class Grifindor extends Hogwarts{
         return "Студент " + getName() + " учится на факультете Гриффиндор и имеет силу магии: " + getMagicStrength() + ", дальность трансгрессии: "
         + getTransgressionRange() + ", уровень благородства: " + getNobility() + ", уровень чести: " + getHonor() + " и уровень храбрости: " + getCourage();
     }
+
+    public static void compareGrif(Grifindor one, Grifindor two) {
+        int sumOne = one.getCourage() + one.getHonor() + one.getNobility();
+        int sumTwo = two.getCourage() + two.getNobility() + two.getHonor();
+
+        if (sumOne > sumTwo) {
+            System.out.println(one.getName() + " лучший Гриффиндорец чем " + two.getName());
+        } else if (sumOne < sumTwo) {
+            System.out.println(two.getName() + " лучший Гриффиндорец чем " + one.getName());
+        } else {
+            System.out.println("Оба гриффиндорца равны");
+        }
+    }
 }

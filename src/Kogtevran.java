@@ -63,4 +63,16 @@ public class Kogtevran extends Hogwarts{
                 + getTransgressionRange() + ", уровень ума: " + getMind() + ", уровень мудрости: " + getWisdom() + " и уровень остроумия: " + getWit()
                 + " и уровень креативности: " + getCreativity();
     }
+    public static void compareKog(Kogtevran one, Kogtevran two) {
+        int sumOne = one.getCreativity() + one.getWit() + one.getWisdom() + one.getMind();
+        int sumTwo = two.getCreativity() + two.getWit() + two.getWisdom() + two.getMind();
+
+        if (sumOne > sumTwo) {
+            System.out.println(one.getName() + " лучший Когтевранец чем " + two.getName());
+        } else if (sumOne < sumTwo) {
+            System.out.println(two.getName() + " лучший Когтевранец чем " + one.getName());
+        } else {
+            System.out.println("Оба Когтевранца равны");
+        }
+    }
 }
